@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/javascripts/script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <center>
+            <form  method="post">
+            <h1><span>Login</span> to continue</h1>
+            <div class="div-input">
+                <input required placeholder="Username" name="email" id="username" type="text" class="username style">
+                <div class="show">
+                <input required style="width: 480px;" placeholder="Password" id="password" type="password" name="password" class="password style ">
+                <img class="eye" onclick="show()" id="img-show" src="/images/eye-white.png">
+                <img class="eye" onclick="hide()" style="display: none;" id="img-hide" src="/images/eye-white-2.png">
+                </div>
+                <font class="error">
+                    {{#if message}}
+                      {{message}}
+                      {{/if}}
+                </font>
+                <button class="btn-submit" type="submit" onclick="check()">Submit</button>
+                </form>
+            </center>
+                <h3>Don't have an account ?<font color="#232399"><a href="/register">Register here</a></h3></font>
+            </div>
+    </div>
+</body>
+</html>
